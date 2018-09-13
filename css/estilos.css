@@ -245,6 +245,9 @@ div.contenedor {
     background-color: rgb(247, 247, 247);
     margin-top: 10px;
 }
+a.invisible {
+    display: none;
+}
 
 div.receta_imagen img {
   width: 100%;
@@ -276,16 +279,18 @@ div.top_recetas ol li img {
     }
     div.receta {
         position: relative;
-        height: 100%;
     }
-    div.receta a.boton {
+    .boton {
+        display: none;
+    }
+    div.receta a.invisible {
         position: absolute;
-        bottom: 250px;
+        bottom: 0px;
         left: 0px;
         display: none;
         transition: all .6s ease;
     }
-    div.top_recetas ol li:hover a.boton {
+    div.top_recetas ol li:hover a.invisible {
         display: block;
     }
 
@@ -320,8 +325,8 @@ div.top_recetas ol li img {
         font-size: 10px
     }
     div.top_recetas h2{
-        text-align: left;
-        font-size: 10px;
+        text-align: center;
+        font-size: .6rem;
     }
 }
 
@@ -528,9 +533,9 @@ div.listado{
 .listado_recetas ul li{
     margin: 10px 0;
 }
-.listado_recetas ul li img {
+.listado_recetas ul li div.receta_imagen img {
     width: 100%;
-
+    height: 100%;
 }
 .listado_recetas h2{
     margin: 10px 0 0 0;
@@ -551,25 +556,27 @@ div.listado{
        width: 100%;
         display: block;
     }
-    .listado_recetas ul li img {
+    .listado_recetas ul li div.receta_imagen {
         width: 50%;
         float: left;
         padding: 0;
     }
-    .listado_recetas ul li p {
+    .listado_recetas ul li div {
         width: 50%;
         float: right;
         padding-left:10px; 
         margin: 0;
         font-size: 15px
     }
+    .listado_recetas ul li div p{
+        width: 100%;
+    }
     .listado_recetas ul li a{
         margin: 20px;
+        display: inline-block;
+
     }
   
-    .listado_recetas ul li:hover div.receta_imagen a{
-        display: block;
-    }
     .listado_recetas ul li:hover div.receta_imagen img{
         filter: grayscale(.6);
         transition: all .6s;
@@ -580,9 +587,7 @@ div.listado{
     }
 }
 @media only screen and (min-width:780px){
-    .listado_recetas ul li img {
-        width: 100%;
-    }
+    
     .listado_recetas ul li p {
         width: 55%;
     }
@@ -605,4 +610,11 @@ Pagina recetas
     .receta p{
         padding:0 20px;
     }
+    .receta ul {
+        list-style: disc; 
+    }
+    .receta ol  {
+        list-style-type: decimal;
+    }
+
 }
