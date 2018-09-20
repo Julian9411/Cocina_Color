@@ -272,6 +272,9 @@ div.top_recetas ol li img {
         float: left;
         padding: 0 10px;
     }
+    div.top_recetas ol li div h2{
+        height: 15px;
+    }
     div.top_recetas ol li:hover img{
         transform: scale(1.1);
         transition: all .4s ease-in-out;
