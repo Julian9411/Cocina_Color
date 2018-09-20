@@ -32,6 +32,7 @@ ol {
     list-style: none;
     padding: 0 30px;
 }
+
 a {
     text-decoration: none;
 }
@@ -242,7 +243,7 @@ Contenido Principal Top Recetas
 **********************/
 div.contenedor {
     width: 100%;
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(255, 255, 255);
     margin-top: 10px;
 }
 a.invisible {
@@ -260,6 +261,8 @@ div.top_recetas ol li img {
     width: 100%;
     margin: 0 auto;
     display: block;
+    transition: all .4s ease-in-out;
+    filter: grayscale(0);
 }
 @media only screen and (min-width:460px){
     section {
@@ -271,13 +274,13 @@ div.top_recetas ol li img {
         display: block;
         float: left;
         padding: 0 10px;
+        padding: 10px;
     }
-    div.top_recetas ol li div h2{
-        height: 15px;
+    div.top_recetas ol li h2{
+        margin: 10px 0;
     }
     div.top_recetas ol li:hover img{
         transform: scale(1.1);
-        transition: all .4s ease-in-out;
         filter: grayscale(1);
     }
     div.receta {
@@ -300,19 +303,22 @@ div.top_recetas ol li img {
 }
 @media only screen and (min-width:780px){
     div.receta_imagen {
-        width: 40%;
+        width: 45%;
         float: left;        
     }
     div.top_recetas ol {
-        width: 60%;
+        width: 55%;
         float: right;
         margin-top:0; 
         overflow: hidden;
         height: 100%;
+        margin: 0;
+        padding: 0;
     }
     div.top_recetas ol li {
-        width: 33.3%;
-        height: 150px;
+        width: 32.3%;
+        display: inline-block;
+        float: none;
     }
     div.contenedor > h2{
         display: block;
@@ -531,10 +537,11 @@ div.listado{
 }
 .listado_recetas ul {
     width: 100%;
-    background-color: #fff;
 }
 .listado_recetas ul li{
     margin: 10px 0;
+    background-color: #fff;
+
 }
 .listado_recetas ul li div.receta_imagen img {
     width: 100%;
@@ -556,20 +563,24 @@ div.listado{
        width: 80%;
    }
    .listado_recetas ul li {
-       width: 100%;
+        width: 100%;
         display: block;
     }
-    .listado_recetas ul li div.receta_imagen {
+    .listado_recetas ul li div.receta_imagen  {
         width: 50%;
         float: left;
         padding: 0;
+    }
+    .listado_recetas ul li div.receta_imagen img {
+        filter: grayscale(0);
+        transition: all .6s ease-in-out;
     }
     .listado_recetas ul li div {
         width: 50%;
         float: right;
         padding-left:10px; 
         margin: 0;
-        font-size: 15px
+        font-size: 15px;    
     }
     .listado_recetas ul li div p{
         width: 100%;
@@ -582,7 +593,7 @@ div.listado{
   
     .listado_recetas ul li:hover div.receta_imagen img{
         filter: grayscale(.6);
-        transition: all .6s;
+
     }
     .listado_recetas ul li p span {
         filter: blur(.7px);
