@@ -27,7 +27,7 @@
                 <a href="index.html"><img src="img/LOGO.png" alt="Logo Cocina Color"></a>
             </div><!--logo-->
             <div class="barra_busqueda">
-                <label for="busqueda" class="buscar"><i class="fas fa-search"></i><input type="serch" id="busqueda"></label>
+                <label for="busqueda" class="serch"><i class="fas fa-search"></i><input type="serch" id="busqueda"></label>
             </div><!--barra-busqueda-->
         </div><!--barra-->
      </header> <!--fin de encabezdo-->
@@ -270,7 +270,7 @@
                 <article id="newslater">
                     <div class="contenedor newslater ">
                         <h2>Registrate a nuestro NewsLater para recivir mas recetas vegetarianas</h2>
-                        <a href="#" class="boton invisible">Suscribete</a>
+                        <a class="boton invisible">Suscribete</a>
                         <form action="index.html" id="registro" class="registro" method="POST">
                                 <div id="datos_usuario" class="registro caja clearfix">
                                 <div class="campo">
@@ -285,11 +285,12 @@
                                     <label for="email">*E-mail:</label>
                                     <input id="email" name="email" type="email" placeholder="Tu E-mail" required> 
                                 </div>
-                                <div class="campo">
-                                    <input type="submit" class="suscribir" value="Suscribirte">
-                                </div>
-                                <div id="error"></div>
+                                <div>
+                                        <input type="submit" class="suscribir" value="Suscribirte">
+                                    </div>
+                                    <div id="error"></div>    
                             </div><!--Datos_Usuarios-->
+                            
                         </form>
 
                     </div>
@@ -328,5 +329,6 @@
         </div><!--contenido_footer-->
         <p>Todos los derechos reservados &copy;  <span>Tenjo/Cundinamarca - 2018</span></p>
     </footer>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

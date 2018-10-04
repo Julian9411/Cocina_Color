@@ -485,16 +485,21 @@ div.recetas {
     }
 }
 /***************************
-NewsLaterr
+NewsLatter
 ****************************/
 #newslater {
     text-align: center;
+}
+#newslater h2 {
+    padding-top:10px; 
 }
 #newslater a {
     display: inline-block;
     margin: 20px;
 }
-
+#datos_usuario {
+    display:none;
+}
 .campo {
     text-align: left;
     margin: 10px;
@@ -502,6 +507,9 @@ NewsLaterr
 #newslater label{
     display: inline-block;
     width: 20%;
+}
+#newslater input {
+    border: 1px solid #cccccc;
 }
 .suscribir {
     background-color: hsl(95, 41%, 23%);
@@ -513,11 +521,23 @@ NewsLaterr
     transition: all .6s ease;
     font-family: 'Lobster', cursive;
     margin: 0 auto;
-    display: block;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 .suscribir:hover {
     transform: scale(1.1);
     background-color: hsla(95, 41%, 23%, 0.801);
+}
+@media only screen and (min-width:460px) {
+   
+    .campo{
+        display: inline-block;
+        margin: 20px 0 ;
+       width: 32%;
+   }
+   #newslater label {
+       width: auto;
+   }
 }
 /***************************
 Footer
