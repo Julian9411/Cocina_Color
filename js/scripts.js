@@ -1,6 +1,7 @@
 (function (){
     'use strict';
 
+    //input de busqueda
     let buscar = document.querySelector('#busqueda');
 
     buscar.setAttribute('placeholder', 'Buscar receta');

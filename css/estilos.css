@@ -95,8 +95,8 @@ div.redes_sociales nav ul li {
 }
 div.redes_sociales nav ul li{
     color: #fff;
-    font-size: 40px;
-    margin-right: 30px;
+    font-size: 2.3em;
+    margin-right: 20px;
     padding-top: 20px; 
 }
 
@@ -138,13 +138,14 @@ div.barra_busqueda {
        height: 150px;
    }
    div.redes_sociales {
-       width: 33.3%;
+       width: 35%;
        position: absolute;
        right: 0;
    }
    div.redes_sociales nav ul {
-       text-align: right;
+       text-align: right!important;
        float: none;
+       width: 100%
    }
     div.barra_busqueda {
         float: none;
@@ -225,7 +226,7 @@ nav.navegacion_principal ul li a:hover {
 @media only screen and (min-width:460px){
     nav.navegacion_principal ul {
         display: inline-block;
-        margin: 16px 0;
+        margin: 10px 0;
         text-align: center;
     }
     nav.navegacion_principal ul li{
@@ -233,9 +234,8 @@ nav.navegacion_principal ul li a:hover {
     }
     nav.navegacion_principal ul li a{
         text-align: center;
-        font-size: 18px;
+        font-size: 1em;
         padding: 5px 20px;
-        width: 100%;
     } 
 }
 @media only screen and (min-width:780px){
@@ -413,11 +413,11 @@ div.menu_recetas ul li a {
         margin: 0;
         padding-left: 5px;
         position: relative;
-        height: 100%;
+        height: 4rem;
         background-color: #fff;
     }
     div.menu_recetas div p {
-       font-size: 10px; 
+       font-size: .5rem; 
        line-height: 100%;
        margin: 0;
     }
@@ -425,16 +425,17 @@ div.menu_recetas ul li a {
         padding-top: 5px;
     }
     div.menu_recetas div a {
-        font-size: 10px;
+        font-size: .6rem;
     }
 }
 @media only screen and (min-width:780px){
     div.menu_recetas div p{
-        font-size: 12px;
+        font-size: .7em;
     }
     div.menu_recetas div a{
         position: absolute;
-        top: 77px;
+        font-size: .8em;
+        bottom: -20px;
         left: 5px;
     }
 }
@@ -449,9 +450,17 @@ div.recetas {
     div.recetas h2 {
         display: block;
     }
+    div.recetas a {
+        float: left;
+    }
+    div.recetas h3 {
+        height: 3em;
+        margin: 10px 0;
+        font-size: .6rem;
+    }
     div.recetas ul li{
         width: 30%;
-        float: left;
+        display: inline-block;
         margin: 3px;
         padding: 0px;
     }
@@ -465,6 +474,8 @@ div.recetas {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         color: #000;
+        height: 3rem;
+        font-size: .7rem;
     }
     /*div.recetas ul li p span {
         filter: blur(.7px);
