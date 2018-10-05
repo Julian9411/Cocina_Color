@@ -4,10 +4,10 @@
     //input de busqueda
     let buscar = document.querySelector('#busqueda');
 
-    buscar.setAttribute('placeholder', 'Buscar receta');
+    buscar.setAttribute('placeholder', 'Buscar recetas');
 
-    //Registro Newslatter
 
+    //campos registro de usuario
     let suscribite = document.querySelector('.newslater a'),
         datosUsuario = document.querySelector('#datos_usuario');
 
@@ -17,6 +17,7 @@
         email = document.querySelector('#email');
 
     //eventos
+    
     nombre.addEventListener('blur', validarRegistro);
     apellido.addEventListener('blur', validarRegistro);
     email.addEventListener('blur', validarRegistro);
@@ -24,6 +25,7 @@
     suscribite.addEventListener('click', registro);
 
     //Funciones
+
     function registro(event){
         event.preventDefault();
         if (suscribite){
