@@ -204,14 +204,14 @@ nav.navegacion_principal {
 }
 nav.navegacion_principal ul {
     width: 100%;
-    text-align: left;
-    margin-top: 55px ; 
-    display: none;
+    text-align: center;
+    margin-top: 60px ; 
     padding: 0;
+    display: none;
 }
 nav.navegacion_principal ul li {
     display: block;
-    padding: 4px;
+    padding: 8px;
 }
 nav.navegacion_principal ul li a {
     font-size: 25px;
@@ -220,6 +220,10 @@ nav.navegacion_principal ul li a {
     font-weight: bold;
 }
 nav.navegacion_principal ul li a:hover {
+    background-color: #375323;
+    color: #fff;
+}
+nav.navegacion_principal ul li.activo{
     background-color: #375323;
     color: #fff;
 }
@@ -501,8 +505,16 @@ NewsLatter
 #newslater {
     text-align: center;
 }
+.newslater {
+    background-image: url(../img/vegetales.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+}
 #newslater h2 {
     padding-top:10px; 
+    color: #FFF;
 }
 #newslater a {
     display: inline-block;
@@ -518,6 +530,7 @@ NewsLatter
 #newslater label{
     display: inline-block;
     width: 20%;
+    color: #fff;
 }
 #newslater input {
     border: 1px solid #cccccc;
@@ -565,6 +578,7 @@ footer h2{
 }
 footer div p {
     text-align: justify;
+    padding-left: 20px;
 }
 footer div nav ul {
     text-align: center;
