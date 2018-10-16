@@ -79,6 +79,11 @@ i:hover{
     transform: scale(1.4);
     transition: all .6s;
 }
+.numero {
+    font-size: 5rem;
+    color: #FFF;
+    margin: 0;
+}
 /*****************************
 Header
 *****************************/
@@ -201,6 +206,7 @@ nav.navegacion_principal {
     background-color: rgb(247, 247, 247);
     margin-top: 10px;
     width: 100%;
+
 }
 nav.navegacion_principal ul {
     width: 100%;
@@ -578,7 +584,7 @@ footer h2{
 }
 footer div p {
     text-align: justify;
-    padding-left: 20px;
+    padding: 20px;
 }
 footer div nav ul {
     text-align: center;
