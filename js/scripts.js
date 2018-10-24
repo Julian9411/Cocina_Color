@@ -91,8 +91,8 @@ $(function (){
 
 // se cambia el contenido del footer
 
-$('div .nosotros h2').text('Incentivate a realizar un cambio');
-$('div .nosotros p').text('Te alimentaras adecuadamente con estas ideas, daras más oportunidad de vida, y haras para ti una nueva oportunidad')
+    $('div .nosotros h2').text('Incentivate a realizar un cambio');
+    $('div .nosotros p').text('Te alimentaras adecuadamente con estas ideas, daras más oportunidad de vida, y haras para ti una nueva oportunidad')
 
 
 });
