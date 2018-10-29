@@ -29,7 +29,7 @@
             </nav>
             </div><!--redes_sociales-->
             <div class="logo">
-                <a href="index.html"><img src="img/LOGO.png" alt="Logo Cocina Color"></a>
+                <a href="index.php"><img src="img/LOGO.png" alt="Logo Cocina Color"></a>
             </div><!--logo-->
             <div class="barra_busqueda">
                 <form action="index.html" method="POST" id='serch' class="buscar">
