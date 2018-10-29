@@ -594,7 +594,7 @@ footer div nav ul li  {
     font-size: 40px;
     margin-right: 25px;
     padding-top: 20px; 
-    display: inline-block;
+    display: inline-block!important;
 
 }
 footer div nav ul li:nth-child(4){
@@ -700,9 +700,12 @@ div.listado{
 /*************************************
 Pagina recetas
 *************************************/
-.receta div img {
+.receta div img.rece {
     width: 100%;
     padding: 10px 0;
+}
+.receta img.nutricional {
+    width: 100%;
 }
 @media only screen and (min-width:460px){
     .receta{
