@@ -57,6 +57,7 @@
 
 $(function (){
 
+
     //se agregan atributos al menu de redes dociales
 
     $('.menu_redes_sociales ul li a:first').attr('href', 'https://www.facebook.com');
