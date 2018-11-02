@@ -7,7 +7,7 @@
         <div class="sociales">
             <h2>Sigenos en nuestras redes sociales</h2>
             <nav class="menu_redes_sociales">
-                    <ul class=>
+                    <ul class="menu">
                         <li><a href="#"><i class="fab fa-facebook-square"></i>  </a></li>
                         <li><a href="#"><i class="fab fa-instagram"></i>          </a></li>
                         <li><a href="#"><i class="fab fa-youtube"></i>             </a></li>

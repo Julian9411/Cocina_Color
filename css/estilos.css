@@ -229,9 +229,8 @@ nav.navegacion_principal ul li a:hover {
     background-color: #375323;
     color: #fff;
 }
-nav.navegacion_principal ul li.activo{
-    background-color: #375323;
-    color: #fff;
+nav.navegacion_principal ul li a.visitado{
+    border-bottom: 2px solid #375323;
 }
 @media only screen and (min-width:460px){
     nav.navegacion_principal ul {
@@ -576,7 +575,11 @@ Footer
 footer {
     background-color: rgba(55, 86, 35, 1);
     width: 100%;
+    position: relative;
     margin: 10px 0 0 0;
+}
+.contenido_footer{
+    width: 100%;
 }
 footer h2{
     margin: 0;
@@ -590,18 +593,21 @@ footer div nav ul {
     text-align: center;
     margin: 0px;
 }
-footer div nav ul li  { 
-    font-size: 40px;
-    margin-right: 25px;
+footer div nav.menu_redes_sociales ul.menu li  { 
     padding-top: 20px; 
+    width: 20%;
+    background-color: transparent;
     display: inline-block!important;
-
+}
+nav.menu_redes_sociales ul.menu li a {
+    margin: 10px;
 }
 footer div nav ul li:nth-child(4){
     margin-right: 0px; 
 }
 footer div nav ul li a i { 
-    color: #1f3013
+    color: #1f3013;
+    font-size: 40px;
 }
 footer p{
     text-align: center;

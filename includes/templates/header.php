@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/estilos.css">
     <?php
-    $archivo = basename($_SERVER['PHP_SELF']);
-    $pagina = str_replace(".php", "", $archivo);
+    if(isset($_GET['/'])){
+        $id = $_GET['/'];
+    };
     ?>
     
     <title>Cocina Color</title>
 </head>
-<body class="<?php echo $pagina; ?>">
+<body class="<?php echo $id; ?>">
 
     <header class="clearfix">
         <div class="barra clearfix">
@@ -29,10 +30,10 @@
             </nav>
             </div><!--redes_sociales-->
             <div class="logo">
-                <a href="index.html"><img src="img/LOGO.png" alt="Logo Cocina Color"></a>
+                <a href="index.php"><img src="img/LOGO.png" alt="Logo Cocina Color"></a>
             </div><!--logo-->
             <div class="barra_busqueda">
-                <form action="index.html" method="POST" id='serch' class="buscar">
+                <form action="index.php" method="POST" id='serch' class="buscar">
                 <label for="busqueda" class="serch"><i class="fas fa-search"></i><input type="serch" id="busqueda"></label>
             </form>
             </div><!--barra-busqueda-->
@@ -50,16 +51,14 @@
                 <?php
                 try{
                     require_once('includes/funciones/bd_conexion.php');
-                    $sql = "SELECT * FROM `desayunos`";
+                    $sql = "SELECT * FROM `categoriasReceta`";
                     $resultado = $conn->query($sql);
                 }catch(Exception $e) { 
                     $error = $e->getMessage();
                 }
+                while($catReceta = $resultado->fetch_assoc()){
                 ?>
-                <li><a href="menu.php<?php  ?>">Desayunos</a></li>
-                <li><a href="almuerzos/almuerzos.html">Almuerzos</a></li>
-                <li><a href="cenas/cenas.html">Cenas</a></li>
-                <li><a href="postres/postres.html">Postres</a></li>
-                <li><a href="bebidas/bebidas.html">Bebidas</a></li>
+                <li><a href="menu.php?/=<?php echo $catReceta['nombre_categorias_receta'] ?>"><?php echo $catReceta['nombre_categorias_receta'] ?></a></li>
+                <?php } ?>
             </ul>
         </nav><!--fin navegacion principal-->

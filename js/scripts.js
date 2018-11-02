@@ -76,10 +76,11 @@ $(function (){
     });
 
 //menu_principal
-    $('nav.navegacion_principal ul li').on('click', function(){
-        $('nav.navegacion_principal ul li').removeClass('activo');
-       $(this).addClass('activo');
-    });
+    $('body.Desayuno nav.navegacion_principal ul li a:contains("Desayuno")').addClass('visitado')
+    $('body.Almuerzo nav.navegacion_principal ul li a:contains("Almuerzo")').addClass('visitado')
+    $('body.Cenas nav.navegacion_principal ul li a:contains("Cenas")').addClass('visitado')
+    $('body.Postres nav.navegacion_principal ul li a:contains("Postres")').addClass('visitado')
+    $('body.Bebidas nav.navegacion_principal ul li a:contains("Bebidas")').addClass('visitado')
 
 //menu_movil
     $('.menu_movil').on('click', function(){
