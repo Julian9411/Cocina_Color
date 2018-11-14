@@ -96,28 +96,28 @@ try{
                                 <img src="img/desayunos2.jpg" alt="Pastas vegetarianas">
                                 <div class=" clearfix" >
                                     <p>Recetas de desayunos rapidas y faciles de preparar como panquques, chilaquiles, omelette y muchos mas</p>
-                                    <a href="desayunos/desayunos.html">Ver recetas de desayunos Vegetarianas</a>
+                                    <a href="menu.php?/=Desayuno">Ver recetas de desayunos Vegetarianas</a>
                                 </div>
                             </li>
                              <li>
                                 <img src="img/almuerzo7.jpg" alt="Pastas vegetarianas">
                                 <div class="contenedor clearfix" >
                                     <p>Prepara deliciosas Pastas Vegetarianas,llenas de nutrientes e ingrendiente accesibles.</p>
-                                    <a href="almuerzos/almuerzos.html">Ver recetas de Pastas Vegetarianas</a>
+                                    <a href="menu.php?/=Almuerzo">Ver recetas de Pastas Vegetarianas</a>
                                  </div>
                             </li>
                              <li>
                                 <img src="img/almuerzo5.jpg" alt="Pastas vegetarianas">
                                 <div class="contenedor clearfix" >
                                     <p>Deliciosos platos fuertes vegetarianos muy nutritivos que te dejaran satisfecho y son faciles de preparar</p>
-                                    <a href="almuerzos/almuerzos.html">Ver recetas de platos fuertes Vegetarianas</a>
+                                    <a href="menu.php?/=Almuerzo">Ver recetas de platos fuertes Vegetarianas</a>
                                  </div>
                             </li>
                              <li>
                                 <img src="img/cenas5.jpg" alt="Pastas vegetarianas">
                                 <div class="contenedor clearfix" >
                                     <p>Platillos vegetarianas con los nutrientes de la soya deliciosos para cualquier ocasion</p>
-                                    <a href="cenas/cenas.html">Ver recetas de soya Vegetarianas</a>
+                                    <a href="menu.php?/=Cenas">Ver recetas de soya Vegetarianas</a>
                                  </div>
                             </li>
                         </ul>
@@ -150,7 +150,9 @@ try{
                                     <p><?php echo $receta['descripcion_receta'] ?></p>
                                     </a>
                                 </li>
-                                <?php } ?> 
+                                <?php } 
+                                    $conn->close();
+                                ?> 
                             </ul>
                         </div>
 
@@ -159,7 +161,7 @@ try{
                     <div class="contenedor newslater ">
                         <h2>Se parte de uno de nosotros suscribite para recivir mas recetas</h2>
                         <a class="boton invisible">Suscribete</a>
-                        <form action="index.html" id="registro" class="registro" method="POST">
+                        <form action="validar_registro.php" id="registro" class="registro" method="POST">
                                 <div id="datos_usuario" class="registro caja clearfix">
                                 <div class="campo">
                                 <label for="nombre">*Nombre:</label>
@@ -174,7 +176,7 @@ try{
                                     <input id="email" name="email" type="email" placeholder="Tu E-mail" required> 
                                 </div>
                                 <div>
-                                        <input type="submit" class="suscribir" value="Suscribirte">
+                                        <input type="submit" name="submit" class="suscribir" value="Suscribirte">
                                     </div>
                                     <div id="error"></div> 
                                     

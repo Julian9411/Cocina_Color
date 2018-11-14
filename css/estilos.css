@@ -631,7 +631,7 @@ footer p span {
     }
 }
 /*****************
-estilo de paginas almuerzo,desayuno,bebidas,postres,cena
+estilo de pagina menu
 ***********************/
 div.listado{
     position: relative;
@@ -731,4 +731,32 @@ Pagina recetas
         list-style-type: decimal;
     }
 
+}
+/***********************
+validar registro
+************************/
+.validarRegistro {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.validarRegistro img{
+    width: 100%;
+}
+
+.validarRegistro h2{
+    padding: 10px 0;
+}
+@media only screen and (min-width:460px){
+    .validarRegistro{
+        width: 80%;
+    }
+    .validarRegistro img{
+        margin: 0 auto;
+        display: block;
+        width: 50%;
+        
+    }
 }

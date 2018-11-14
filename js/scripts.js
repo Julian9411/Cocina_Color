@@ -71,7 +71,7 @@ $(function (){
     $('div.newslater a').on('click', function(){
         $(this).hide();
         $('#datos_usuario').show(800);
-        $('div.newslater p').animateNumber({number: 80}, 2000);
+        $('div.newslater p').animateNumber({number: 87}, 2000);
 
     });
 
