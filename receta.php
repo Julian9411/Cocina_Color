@@ -6,7 +6,7 @@ if(isset($_GET['id'])){
     }
     try{
         require_once('includes/funciones/bd_conexion.php');
-    $sql = "SELECT * FROM `recetas` WHERE `nombre_receta`='{$id}'|| `id_receta`='{$id}'";
+        $sql = "SELECT * FROM `recetas` WHERE `nombre_receta`='{$id}'|| `id_receta`='{$id}'";
         
         $resultado = $conn->query($sql);
     }catch(Exception $e) { 

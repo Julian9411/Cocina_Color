@@ -69,9 +69,10 @@ $(function (){
 
 //newslatter
     $('div.newslater a').on('click', function(){
+        let numero = $('p.numero').value;
         $(this).hide();
         $('#datos_usuario').show(800);
-        $('div.newslater p').animateNumber({number: 87}, 2000);
+        $('div.newslater p').animateNumber({number:  87}, 2000);
 
     });
 
@@ -97,3 +98,5 @@ $(function (){
 
 
 });
+
+//redireccionamiento de validar_registro.php a index.php

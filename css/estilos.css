@@ -116,9 +116,12 @@ div.logo img {
     margin: 0 auto;
     display: block;
 }
-div.barra_busqueda i{
+div.barra_busqueda #buscar{
     color: #fff;
-    padding-right: 10px; 
+    padding-left: 10px; 
+    width: 30px;
+    position: absolute;
+    bottom: 12px;
 }
 div.barra_busqueda {
     text-align: center;
@@ -759,4 +762,7 @@ validar registro
         width: 50%;
         
     }
+}
+.result_busqueda {
+    min-height: 300px;
 }

@@ -1,4 +1,7 @@
-<?php include_once 'includes/templates/header.php'; ?>
+<?php 
+    include_once 'includes/funciones/funciones.php';
+    include_once 'includes/templates/header.php'; 
+?>
 
 <?php 
 if(isset($_GET['/'])){
@@ -179,9 +182,9 @@ try{
                                         <input type="submit" name="submit" class="suscribir" value="Suscribirte">
                                     </div>
                                     <div id="error"></div> 
-                                    
+
                                 <h2>Personas Suscritas</h2>
-                                <p class="numero">0</p>
+                                    <p class="numero">2</p>
                             </div><!--Datos_Usuarios-->
                             
                         </form>

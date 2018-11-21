@@ -33,9 +33,10 @@
                 <a href="index.php"><img src="img/LOGO.png" alt="Logo Cocina Color"></a>
             </div><!--logo-->
             <div class="barra_busqueda">
-                <form action="index.php" method="POST" id='serch' class="buscar">
-                <label for="busqueda" class="serch"><i class="fas fa-search"></i><input type="serch" id="busqueda"></label>
-            </form>
+                <form action="resultados.php" method="POST" id='serch' class="buscar">
+                   <input type="text" id="busqueda" name="buscar">
+                   <input type="image" src="img/search-solid.png" name="search" id="buscar">
+                </form>
             </div><!--barra-busqueda-->
         </div><!--barra-->
      </header> <!--fin de encabezdo-->
