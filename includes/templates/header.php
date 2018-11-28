@@ -17,6 +17,7 @@
 </head>
 <body class="<?php echo $id; ?>">
 
+<div class="header">
     <header class="clearfix">
         <div class="barra clearfix">
             <div class="redes_sociales">
@@ -63,3 +64,4 @@
                 <?php } ?>
             </ul>
         </nav><!--fin navegacion principal-->
+</div>

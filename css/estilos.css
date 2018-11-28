@@ -207,7 +207,7 @@ Navegacion Principal
 ***********************/
 nav.navegacion_principal {
     background-color: rgb(247, 247, 247);
-    margin-top: 10px;
+    margin-top: 0px;
     width: 100%;
 
 }
@@ -280,6 +280,7 @@ div.top_recetas ol li img {
     display: block;
     transition: all .4s ease-in-out;
     filter: grayscale(0);
+
 }
 @media only screen and (min-width:460px){
     section {
@@ -378,6 +379,8 @@ div.barra_lateral ul li {
         width: 23%;
         float: right;
         margin-top: 10px; 
+        position: fixed;
+        right: 0;
     }
 }
 /**************************
@@ -641,6 +644,7 @@ div.listado{
 }
 .listado_recetas ul {
     width: 100%;
+    margin-top: 240px;
 }
 .listado_recetas ul li{
     margin: 15px 0;
@@ -709,28 +713,32 @@ div.listado{
 /*************************************
 Pagina recetas
 *************************************/
-.receta div img.rece {
+.receta1{
+    margin-top: 270px;
+}
+.receta1 div img.rece {
     width: 100%;
     padding: 10px 0;
 }
-.receta img.nutricional {
+.receta1 img.nutricional {
     width: 100%;
 }
 @media only screen and (min-width:460px){
-    .receta{
+    .receta1{
         float: none;
         width: 100%;
+        margin-top: 230px;
     }
-    .receta h3{
+    .receta1 h3{
         padding: 0 20px;
     }
-    .receta p{
+    .receta1 p{
         padding:0 20px;
     }
-    .receta ul {
+    .receta1 ul {
         list-style: disc; 
     }
-    .receta ol  {
+    .receta1 ol  {
         list-style-type: decimal;
     }
 
@@ -765,4 +773,15 @@ validar registro
 }
 .result_busqueda {
     min-height: 300px;
+}
+.header{
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+.contenido_principal{
+    margin-top: 230px;
 }

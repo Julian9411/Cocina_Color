@@ -13,7 +13,7 @@ if(isset($_GET['id'])){
         $error = $e->getMessage();
     }
 ?>
-        <section class="receta desayuno">
+        <section class="receta1 desayuno">
             <article class="clearfix">
             <?php while($receta = $resultado->fetch_assoc()){?>
                 <div class="contenedor">
