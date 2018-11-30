@@ -1,0 +1,787 @@
+/***************************
+Generales
+***************************/
+html {
+    box-sizing: border-box;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/FONDO.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+ul {
+    list-style: none;
+    padding: 0 30px;
+    
+}
+ol {
+    list-style: none;
+    padding: 0 30px;
+}
+
+a {
+    text-decoration: none;
+}
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 15px 0;
+    font-family: 'Merriweather', serif;
+}
+h3 {
+    margin: 0;
+    font-size: 17px;;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+}
+p {
+    line-height: 1.4em;
+    font-family: 'Slabo 27px', serif;
+}
+@media only screen and (min-width:780px){
+    p {
+        font-size: 20px;
+    }
+}
+.boton {
+    background-color: hsl(95, 41%, 23%);
+    padding: 10px 40px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4em;
+    margin-top: 0px;
+    display: inline-block; 
+    transition: all .6s ease;
+    font-family: 'Lobster', cursive;
+
+}
+.boton:hover {
+    transform: scale(1.1);
+    background-color: hsla(95, 41%, 23%, 0.801);
+}
+i:hover{
+    cursor: pointer;
+    transform: scale(1.4);
+    transition: all .6s;
+}
+.numero {
+    font-size: 5rem;
+    color: #FFF;
+    margin: 0;
+}
+/*****************************
+Header
+*****************************/
+div.barra {
+    background-color: rgba(55, 86, 35, 1);
+    width: 100%;
+    position: relative;
+}
+div.redes_sociales nav ul{
+    text-align: center;
+}
+div.redes_sociales nav ul li {
+    display: inline-block;
+}
+div.redes_sociales nav ul li{
+    color: #fff;
+    font-size: 2.3em;
+    margin-right: 20px;
+    padding-top: 20px; 
+}
+
+div.redes_sociales nav ul li:last-child{
+    margin-right: 0px;
+}
+div.redes_sociales nav ul li a i {
+    color: #fff;
+}
+div.logo img {
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+}
+div.barra_busqueda #buscar{
+    color: #fff;
+    padding-left: 10px; 
+    width: 30px;
+    position: absolute;
+    bottom: 12px;
+}
+div.barra_busqueda {
+    text-align: center;
+    padding: 10px;
+}
+@media only screen and (min-width:460px){
+   div.logo {
+       width: 50%;
+       float: left;
+   }
+    div.redes_sociales{
+        float: right;
+        width: 50%;
+        margin: 30px 0;
+    }
+    div.barra_busqueda {
+        margin: 150px 20px 0 20px;
+    }   
+}
+@media only screen and (min-width:780px){
+   div.barra {
+       height: 150px;
+   }
+   div.redes_sociales {
+       width: 35%;
+       position: absolute;
+       right: 0;
+   }
+   div.redes_sociales nav ul {
+       text-align: right!important;
+       float: none;
+       width: 100%
+   }
+    div.barra_busqueda {
+        float: none;
+        width: 33.3%;
+        margin: 60px 20px!important;
+        text-align: left;
+        font-size: 30px ;
+        position: absolute;
+    }
+    div.barra_busqueda input{
+        width: 170px;
+        height: 30px;
+        color: #000;
+    }
+    div.logo {
+        top: 0;
+        width: 100%;
+        margin: 0 auto;        
+    }
+}
+/*********************
+Menu movil
+*********************/
+div.menu_movil {
+    width: 70px;
+    display: block;
+    float: left;
+    text-align: left;
+    margin: 12px 0; 
+    padding-left: 20px; 
+}
+div.menu_movil span {
+    height: 8px;
+    margin-bottom: 6px;
+    background-color: #375323;
+    display: block;
+}
+div.menu_movil span:nth-child(3) {
+    margin-bottom: 0px
+}
+div.menu_movil:hover {
+    cursor: pointer;
+}
+@media only screen and (min-width:460px){
+    div.menu_movil{
+        display: none;
+    }
+}
+/**********************
+Navegacion Principal
+***********************/
+nav.navegacion_principal {
+    background-color: rgb(247, 247, 247);
+    margin-top: 0px;
+    width: 100%;
+
+}
+nav.navegacion_principal ul {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px ; 
+    padding: 0;
+    display: none;
+}
+nav.navegacion_principal ul li {
+    display: block;
+    padding: 8px;
+}
+nav.navegacion_principal ul li a {
+    font-size: 25px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+nav.navegacion_principal ul li a:hover {
+    background-color: #375323;
+    color: #fff;
+}
+nav.navegacion_principal ul li a.visitado{
+    border-bottom: 2px solid #375323;
+}
+@media only screen and (min-width:460px){
+    nav.navegacion_principal ul {
+        display: inline-block;
+        margin: 10px 0;
+        text-align: center;
+    }
+    nav.navegacion_principal ul li{
+        display: inline-block;
+    }
+    nav.navegacion_principal ul li a{
+        text-align: center;
+        font-size: 1em;
+        padding: 5px 20px;
+    } 
+}
+@media only screen and (min-width:780px){
+    nav.navegacion_principal ul li a{
+        font-size: 22px;
+    }
+}
+/**********************
+Contenido Principal Top Recetas
+**********************/
+div.contenedor {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+a.invisible {
+    display: none;
+}
+
+div.receta_imagen img {
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 auto;
+  display: block;
+}
+
+div.top_recetas ol li img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    transition: all .4s ease-in-out;
+    filter: grayscale(0);
+
+}
+@media only screen and (min-width:460px){
+    section {
+        width: 76%;
+        float: left;
+    }
+    div.top_recetas ol li{
+        width: 50%;
+        display: block;
+        float: left;
+        padding: 0 10px;
+        padding: 10px;
+    }
+    div.top_recetas ol li h2{
+        margin: 10px 0;
+    }
+    div.top_recetas ol li:hover img{
+        transform: scale(1.1);
+        filter: grayscale(1);
+    }
+    div.receta {
+        position: relative;
+    }
+    .boton {
+        display: none;
+    }
+    div.receta a.invisible {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        display: none;
+        transition: all .6s ease;
+    }
+    div.top_recetas ol li:hover a.invisible {
+        display: block;
+    }
+
+}
+@media only screen and (min-width:780px){
+    div.receta_imagen {
+        width: 45%;
+        float: left;        
+    }
+    div.top_recetas ol {
+        width: 55%;
+        float: right;
+        margin-top:0; 
+        overflow: hidden;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    div.top_recetas ol li {
+        width: 32.3%;
+        display: inline-block;
+        float: none;
+    }
+    div.contenedor > h2{
+        display: block;
+    }
+    div.top_recetas > h2,
+    div.top_recetas p,
+    div.top_recetas a.boton{
+        display: none;
+    }
+    div.receta a.boton {
+        bottom: 0;
+        left: 0;
+        font-size: 10px
+    }
+    div.top_recetas h2{
+        text-align: center;
+        font-size: .6rem;
+    }
+}
+
+/****************************
+Barra Lateral
+***************************/
+div.barra_lateral {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 2px 0;
+}
+div.barra_lateral h2 {
+    font-size: 18px; 
+    margin: 10px 0;
+}
+div.barra_lateral ul li {
+    padding: 10px 0;
+}
+
+@media only screen and (min-width:460px){
+    aside{
+        background-color: #fff;
+        width: 23%;
+        float: right;
+        margin-top: 10px; 
+        position: fixed;
+        right: 0;
+    }
+}
+/**************************
+Menu Recetas
+***************************/
+
+div.menu_recetas {
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+    margin-top: 10px;
+    padding-bottom: 10px; 
+}
+div.menu_recetas ul {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+div.menu_recetas ul li img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+div.menu_recetas ul li a {
+    display: inline-block;
+    padding-bottom: 10px;
+    color: #375323;
+    font-style: italic;
+}
+@media only screen and (min-width:460px){
+    div.menu_recetas ul li {
+        width: 48%;
+        padding: 10px;
+        float: left;
+        border: 1px solid #375323;
+        margin: 2px;
+        background-color: #fff;
+    }
+    div.menu_recetas ul li img {
+        width: 40%;
+        float: left;
+    }
+    div.menu_recetas div {
+        float: right;
+        width: 60%;
+        margin: 0;
+        padding-left: 5px;
+        position: relative;
+        height: 4rem;
+        background-color: #fff;
+    }
+    div.menu_recetas div p {
+       font-size: .5rem; 
+       line-height: 100%;
+       margin: 0;
+    }
+    div.menu_recetas div p:nth-child(2){
+        padding-top: 5px;
+    }
+    div.menu_recetas div a {
+        font-size: .6rem;
+    }
+}
+@media only screen and (min-width:780px){
+    div.menu_recetas div p{
+        font-size: .7em;
+    }
+    div.menu_recetas div a{
+        position: absolute;
+        font-size: .8em;
+        bottom: -20px;
+        left: 5px;
+    }
+}
+/****************************
+Recetas
+**************************/
+div.recetas {
+    display: none;
+}
+@media only screen and (min-width:460px){
+    div.recetas,
+    div.recetas h2 {
+        display: block;
+    }
+    div.recetas a {
+        float: left;
+    }
+    div.recetas h3 {
+        height: 3em;
+        margin: 10px 0;
+        font-size: .6rem;
+    }
+    div.recetas ul li{
+        width: 30%;
+        display: inline-block;
+        margin: 3px;
+        padding: 0px;
+    }
+    div.recetas ul li img {
+        width: 100%;
+        padding: 0;
+    }
+    div.recetas ul li p{
+        margin: 0px;
+        background: -webkit-linear-gradient(rgba(0, 0, 0 , .8),rgba(0,0,0,.4));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #000;
+        height: 3rem;
+        font-size: .7rem;
+    }
+    /*div.recetas ul li p span {
+        filter: blur(.7px);
+        display: block;
+    }*/
+    div.recetas ul li a h3 {
+        color: #000;
+    }
+    div.recetas ul li a p {
+        color: #000;
+        font-style: italic;
+    }
+}
+@media only screen and (min-width:780px){
+    div.recetas ul li {
+        width: 23%;
+        margin: 5px;
+    }
+}
+/***************************
+NewsLatter
+****************************/
+#newslater {
+    text-align: center;
+}
+.newslater {
+    background-image: url(../img/vegetales.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+}
+#newslater h2 {
+    padding-top:10px; 
+    color: #FFF;
+}
+#newslater a {
+    display: inline-block;
+    margin: 20px;
+}
+#datos_usuario {
+    display:none;
+}
+.campo {
+    text-align: left;
+    margin: 10px;
+}
+#newslater label{
+    display: inline-block;
+    width: 20%;
+    color: #fff;
+}
+#newslater input {
+    border: 1px solid #cccccc;
+}
+.suscribir {
+    background-color: hsl(95, 41%, 23%);
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 0px;
+    transition: all .6s ease;
+    font-family: 'Lobster', cursive;
+    margin: 0 auto;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.suscribir:hover {
+    transform: scale(1.1);
+    background-color: hsla(95, 41%, 23%, 0.801);
+}
+@media only screen and (min-width:460px) {
+   
+    .campo{
+        display: inline-block;
+        margin: 20px 0 ;
+       width: 32%;
+   }
+   #newslater label {
+       width: auto;
+   }
+}
+/***************************
+Footer
+****************************/
+
+footer {
+    background-color: rgba(55, 86, 35, 1);
+    width: 100%;
+    position: relative;
+    margin: 10px 0 0 0;
+}
+.contenido_footer{
+    width: 100%;
+}
+footer h2{
+    margin: 0;
+    padding: 10px; 
+}
+footer div p {
+    text-align: justify;
+    padding: 20px;
+}
+footer div nav ul {
+    text-align: center;
+    margin: 0px;
+}
+footer div nav.menu_redes_sociales ul.menu li  { 
+    padding-top: 20px; 
+    width: 20%;
+    background-color: transparent;
+    display: inline-block!important;
+}
+nav.menu_redes_sociales ul.menu li a {
+    margin: 10px;
+}
+footer div nav ul li:nth-child(4){
+    margin-right: 0px; 
+}
+footer div nav ul li a i { 
+    color: #1f3013;
+    font-size: 40px;
+}
+footer p{
+    text-align: center;
+    margin-bottom: 0; 
+}
+footer p span {
+    display: block;
+}
+@media only screen and (min-width:460px){
+    footer div.nosotros {
+        width: 40%;
+        float: left;
+        text-align: left;
+    }
+    footer div.sociales {
+        width: 40%;
+        float: right;
+    }
+    div.sociales ul li:hover a i{
+        color: #fff;
+    }
+}
+/*****************
+estilo de pagina menu
+***********************/
+div.listado{
+    position: relative;
+}
+.listado_recetas ul {
+    width: 100%;
+    margin-top: 240px;
+}
+.listado_recetas ul li{
+    margin: 15px 0;
+    background-color: #fff;
+
+}
+.listado_recetas ul li div.receta_imagen img {
+    width: 100%;
+    height: 100%;
+}
+.listado_recetas h2{
+    margin: 10px 0 0 0;
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+.listado_recetas ul li div.receta_imagen {
+    position: relative;
+}
+@media only screen and (min-width:460px){
+   .listado_recetas {
+       float: none;
+       margin: 0 auto;
+       width: 80%;
+   }
+   .listado_recetas ul li {
+        width: 100%;
+        display: block;
+    }
+    .listado_recetas ul li div.receta_imagen  {
+        width: 50%;
+        float: left;
+        padding: 0;
+    }
+    .listado_recetas ul li div.receta_imagen img {
+        filter: grayscale(0);
+        transition: all .6s ease-in-out;
+    }
+    .listado_recetas ul li div {
+        width: 50%;
+        float: right;
+        padding-left:10px; 
+        margin: 0;
+        font-size: 15px;    
+    }
+    .listado_recetas ul li div p{
+        width: 100%;
+    }
+    .listado_recetas ul li a{
+        margin: 20px;
+        display: inline-block;
+
+    }
+  
+    .listado_recetas ul li:hover div.receta_imagen img{
+        filter: grayscale(.6);
+
+    }
+}
+@media only screen and (min-width:780px){
+    
+    .listado_recetas ul li p {
+        width: 55%;
+    }
+}
+/*************************************
+Pagina recetas
+*************************************/
+.receta1{
+    margin-top: 270px;
+}
+.receta1 div img.rece {
+    width: 100%;
+    padding: 10px 0;
+}
+.receta1 img.nutricional {
+    width: 100%;
+}
+@media only screen and (min-width:460px){
+    .receta1{
+        float: none;
+        width: 100%;
+        margin-top: 230px;
+    }
+    .receta1 h3{
+        padding: 0 20px;
+    }
+    .receta1 p{
+        padding:0 20px;
+    }
+    .receta1 ul {
+        list-style: disc; 
+    }
+    .receta1 ol  {
+        list-style-type: decimal;
+    }
+
+}
+/***********************
+validar registro
+************************/
+.validarRegistro {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.validarRegistro img{
+    width: 100%;
+}
+
+.validarRegistro h2{
+    padding: 10px 0;
+}
+@media only screen and (min-width:460px){
+    .validarRegistro{
+        width: 80%;
+    }
+    .validarRegistro img{
+        margin: 0 auto;
+        display: block;
+        width: 50%;
+        
+    }
+}
+.result_busqueda {
+    min-height: 300px;
+}
+.header{
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+.contenido_principal{
+    margin-top: 230px;
+}
